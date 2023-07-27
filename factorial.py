@@ -1,24 +1,28 @@
-import time   
+# python program to complete sum of series
+# 1! + 2! + 3! + ... + N!  
 
-#final_list = []    
+#Function to return sum
+# of 1!, 2! upto N!
+def findFactSum(N):
+    
+    # Initializing the variables
+    f = 1
+    Sum = 0
 
-def factorial(n):
-    time.sleep(.1)
-    result = 1  
-    for i in range (1,n+1): 
-        result *= i
-    return result     
+    # Calculate the factorial and sum
+    # in the loop
+    for i in range(1, N + 1):
+        f = f * i
+        Sum += f
 
-def sum_factorial():
-    final_list = [] 
-    for i in range(1, 50):
-        final_list.append(factorial(i))
-    result=sum(final_list)
-    print("Final SUM = {}".format(result))
-    return result 
+    # Return sum as the final result.
+    return Sum
 
+# Driver Code
 if __name__ == "__main__":
-    sum_factorial()  
+    N = 5
 
-# Outputs this
-#Final SUM = 620960027832821612639424806694551108812720525606160920420940314
+    #Function call
+    print(findFactSum(N))
+
+    # contributed by rakeshsahni
